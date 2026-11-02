@@ -43,6 +43,7 @@ DMD Beauty Salon provides professional beauty and grooming services including ha
 ## 🚀 Deployment
 
 The website is fully optimized for deployment on modern free static hosting platforms which is Netlify.
+https://comforting-longma-609421.netlify.app
 
 ---
 
