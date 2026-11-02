@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>DMD Beauty Salon | Service Enquiry & Pricing</title>
+    <meta name="description" content="Enquire about professional braids, wigs, makeup, and nail services at DMD Beauty Salon in Pretoria. Get instant cost estimates and availability.">
+    <meta name="keywords" content="beauty salon enquiry, braids price Pretoria, wig installation, makeup booking, nail art">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>DMD Beauty Salon</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Make an Enquiry</h2>
+            <p>Complete the form below to enquire about our braids, wigs, makeup or nail services.</p>
+        </section>
+
+        <section>
+            <!-- Form element with ID for JavaScript validation and handling -->
+            <form id="enquiryForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="service">Select a Service:</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="braids">Braids</option>
+                    <option value="wigs">Wigs</option>
+                    <option value="makeup">Makeup</option>
+                    <option value="nails">Nails</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Submit Enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h2>DMD Beauty Salon</h2>
+        <p>Braids | Wigs | Makeup | Nails</p>
+        <p>&copy; 2026 DMD Beauty Salon. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>

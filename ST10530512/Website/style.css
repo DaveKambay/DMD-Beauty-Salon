@@ -1,0 +1,311 @@
+/* ==========================================================================
+   DMD BEAUTY SALON - EXTERNAL STYLESHEET
+   ========================================================================== */
+
+/* Imports custom Google fonts for headings and body text */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset browser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the website */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #FAF6F0; /* Warm soft cream background */
+    color: #2B2B2B;           /* Charcoal text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Default image behavior */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Link reset */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+
+header {
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #6B4C4C; /* Deep mauve accent color */
+    margin-bottom: 15px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    font-weight: 500;
+    color: #2B2B2B;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #D4AF37; /* Rose gold hover effect */
+}
+
+/* ==========================================================================
+   MAIN LAYOUT & GENERAL SECTIONS
+   ========================================================================== */
+
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Base white container card */
+section {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #6B4C4C;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+    color: #555555;
+}
+
+/* General button links (e.g., "Make an Enquiry", "View All Services") */
+main section > a[href] {
+    display: inline-block;
+    background-color: #6B4C4C;
+    color: #FFFFFF;
+    padding: 10px 24px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+main section > a[href]:hover {
+    background-color: #523838;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   INDEX.HTML SPECIFIC STYLING
+   ========================================================================== */
+
+/* Welcome banner image on home page */
+main > section:first-of-type img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Services list on original home page */
+main > section ul {
+    list-style: none;
+    margin: 15px 0;
+}
+
+main > section ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: #444444;
+}
+
+/* Gold star bullet points for lists */
+main > section ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #D4AF37;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   SERVICES.HTML DECORATED CARD STYLING
+   ========================================================================== */
+
+/* Cards containing images and service content on services.html */
+main > section:has(img):not(:first-of-type) {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover animation */
+main > section:has(img):not(:first-of-type):hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Service picture inside card */
+main > section:has(img):not(:first-of-type) img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Sub-service 2-column grid layout inside service card */
+main > section:has(img):not(:first-of-type) ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 10px 0 15px 0;
+}
+
+/* Price tag highlight */
+main > section:has(img):not(:first-of-type) p:has(strong) {
+    background-color: #FAF6F0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    display: inline-block;
+    border-left: 3px solid #D4AF37;
+    margin-bottom: 10px;
+}
+
+/* "Book This Service" button inside card */
+main > section:has(img):not(:first-of-type) a[href] {
+    display: inline-block;
+    background-color: #6B4C4C;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   ENQUIRY FORM STYLING
+   ========================================================================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: 500;
+    color: #6B4C4C;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+}
+
+form button {
+    background-color: #6B4C4C;
+    color: #FFFFFF;
+    border: none;
+    padding: 14px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #523838;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+    background-color: #6B4C4C;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #E0E0E0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE ADAPTATION)
+   ========================================================================== */
+
+@media screen and (max-width: 767px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    section {
+        padding: 20px;
+    }
+
+    /* Convert service cards into a single column on mobile screens */
+    main > section:has(img):not(:first-of-type) {
+        grid-template-columns: 1fr;
+    }
+
+    main > section:has(img):not(:first-of-type) ul {
+        grid-template-columns: 1fr;
+    }
+}
